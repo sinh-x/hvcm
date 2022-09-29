@@ -197,7 +197,11 @@ section,
   /////////////////////// */
 
 .page-header {
-  padding: 2em 0;
+  background-color: var(--clr-primary-200);
+  padding:2em 0;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
 }
 
 .page-header__content {
@@ -205,20 +209,140 @@ section,
   justify-content: space-between;
 }
 
+.page-header__content .logo {
+  margin-left: 3em;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background-color: var(--clr-primary-200);
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
 .nav-list {
   margin: 0;
   padding: 0;
 }
 
+.nav-list li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
 .nav-list a {
+  font-size: 1rem;
   color: var(--clr-neutral-900);
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-thickness: 0.125em;
+  text-underline-offset: 0.25em;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+.nav-list li.active a {
+  text-decoration-thickness: 0.25em;
 }
 
 .nav-list a:focus,
 .nav-list a:hover {
   color: var(--clr-primary-400);
-  text-decoration: underline;
+  text-decoration: none;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span, 
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: var(--clr-primary-400);
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after  {
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+@media screen and (min-width: 800px) {
+  .nav-toggle-label {
+    display: none;
+  }  
+
+  .page-header__content {
+    display: grid;
+    grid-template-columns: auto fr minmax(600px, fr);
+  }
+
+  .logo {
+    grid-column: 2 / 3;
+  }
+
+  nav {
+    position: relative;
+    text-align: left;
+    transition: none;
+    transform: scale(1,1);
+    background: none;
+    top: initial;
+    left: initial;
+
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+
+  .nav-list a {
+    opacity: 1;
+  }
 }
 
 /* //////////////////////
