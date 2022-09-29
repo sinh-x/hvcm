@@ -15,21 +15,38 @@ banner:
           <a href="./blog" class="btn btn--neutral">Chia sẻ trải nghiệm</a>
         </div>
       </div>
-      <div>
-        <img src="//unsplash.it/510" alt="" class="hero__image">
+      <div class="carousel">
+        <button class="carousel__button carousel__button--left">
+          <img src="/assets/img/left-2.svg" alt="">
+        </button>
+        <div class="carousel__track-container">
+          <ul class="carousel__track">
+            {%- for post in collections.vetuiminh -%}
+              {% include 'image-carousel.njk' %}
+            {%- endfor %}
+          </ul>
+        </div>
+        <button class="carousel__button carousel__button--right">
+          <img src="/assets/img/right-2.svg" alt="">
+        </button>
+        <div class="carousel__nav">
+            {%- for post in collections.vetuiminh -%}
+              <button class="carousel__indicator"></button>
+            {%- endfor %}
+        </div>
       </div>
   </div>
 </section>
 
 <section id="featured-articles" class="featured-articles">
   <div class="container flow">
-    <h2 class="section-title text-center ">Chia sẻ của Trúc & Sinh</h2>
+    <h2 class="section-title text-center">Chia sẻ của Trúc & Sinh</h2>
     <p class="text-center">Đây là những bài viết chia sẻ về trải nghiệm của Trúc & Sinh trong hành trình Hiểu Về Chính Mình</p>
-    <ul role="list" class="articles__list flow"><li>
+    <ul role="list" class="articles__list flow">
       {%- for post in collections.featured | reverse -%}
         {% include 'article-snippet.njk' %}
       {%- endfor %}
-
     </ul>
   </div>
+  <script src="js/carousel.js"></script>
 </section> 
