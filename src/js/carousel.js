@@ -21,6 +21,8 @@ setCarouselWidth()
 // on windows resize - relocate the legend to be always on the right of the map;
 window.addEventListener('resize', function (event) {
   setCarouselWidth()
+  const currentSlide = track.querySelector('.current-slide');
+  moveToSlide(track, currentSlide, currentSlide)
 }, true);
 
 const moveToSlide = (track, currentSlide, targetSlide) => {
