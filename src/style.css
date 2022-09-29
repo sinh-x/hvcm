@@ -213,10 +213,10 @@ header {
   left: 0;
   right: 0;
   z-index: 999;
-  display: flex;
-  justify-content: space-between;
+
+  text-align: center;
   align-items: center;
-  padding: 1em 1em 0em 0em;
+  padding: 0.5em 1em 0.5em 0em;
   transition: background 250ms ease-in;
   background: var(--background);
   color: var(--text);
@@ -231,13 +231,23 @@ nav {
   text-align: left;
   top: 100%;
   left: 0;
-  background-color: var(--clr-primary-200);
+  width: 100%;
+
+  background-color: var(--clr-neutral-900);
+  opacity: .9;
+  box-shadow: 0 3px 20px rgba(255, 255, 255, 0.2);
+
   transform: scale(1, 0);
   transform-origin: top;
   transition: transform 400ms ease-in-out;
 }
 
 .nav-scrolled {
+  background: #f4f4f4;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+}
+
+.header-scrolled {
   --text: #333;
   --text-inverse: #f4f4f4;
   --background: #f4f4f4;
@@ -245,10 +255,9 @@ nav {
 }
 
 .nav-list {
-  list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
+  list-style: none;
 }
 
 .nav-list li {
@@ -286,7 +295,9 @@ nav {
 }
 
 .nav-toggle {
-  display: none;
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
 }
 
 .nav-toggle:checked~nav {
@@ -301,7 +312,7 @@ nav {
 .nav-toggle-label {
   position: absolute;
   z-index: 999;
-  top: 8px;
+  top: 4px;
   left: 0;
   margin-left: 1em;
   height: 100%;
@@ -341,12 +352,18 @@ nav {
   }
 
   header {
+    padding: 1em 1em 0em 0em;
     display: grid;
     grid-template-columns: auto auto auto minmax(600px, fr);
   }
 
   .site-logo {
     grid-column: 2 / 3;
+  }
+
+  .nav-scrolled {
+    background: none;
+    box-shadow: none;
   }
 
   nav {
@@ -357,6 +374,7 @@ nav {
     background: none;
     top: initial;
     left: initial;
+    box-shadow: none;
 
     grid-column: 3 / 4;
     display: flex;
