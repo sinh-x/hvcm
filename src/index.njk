@@ -11,8 +11,8 @@ banner:
         <p>Hiểu về chính mình là một hành trình mà mỗi người sẽ đi trong suốt cuộc sống của mình.</p>
         <p>Nơi đây là một điểm bắt đầu để chúng mình gặp nhau và chia sẻ về hành trình của mỗi người trong chúng ta.</p>
         <div class="flex-group">
-          <a href="#featured-articles" class="btn btn--primary">Featured articles</a>
-          <a href="./blog" class="btn btn--neutral">Most recent articles</a>
+          <a href="./ve-truc-sinh" class="btn btn--primary">Về tụi mình...</a>
+          <a href="./blog" class="btn btn--neutral">Chia sẻ trải nghiệm</a>
         </div>
       </div>
       <div>
@@ -23,8 +23,8 @@ banner:
 
 <section id="featured-articles" class="featured-articles">
   <div class="container flow">
-    <h2 class="section-title text-center ">Featured articles</h2>
-    <p class="text-center">Here is a sample of articles which I feel give you a good idea of what this site is all about.</p>
+    <h2 class="section-title text-center ">Chia sẻ của Trúc & Sinh</h2>
+    <p class="text-center">Đây là những bài viết chia sẻ về trải nghiệm của Trúc & Sinh trong hành trinh Hiểu Về Chính Mình</p>
     <ul role="list" class="articles__list flow"><li>
       {%- for post in collections.featured | reverse -%}
         {% include 'article-snippet.njk' %}
