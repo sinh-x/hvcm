@@ -16,6 +16,7 @@ const setCarouselWidth = () => {
   }
   slides.forEach(setSlidePosition)
 }
+setCarouselWidth()
 
 // on windows resize - relocate the legend to be always on the right of the map;
 window.addEventListener('resize', function (event) {
