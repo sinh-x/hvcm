@@ -59,6 +59,11 @@ dd {
   margin: 0;
 }
 
+h1.soft-text {
+  font-family: 'Dancing Script';
+  font-size: 50px;
+}
+
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul:where([role="list"]),
 ol:where([role="list"]) {
@@ -254,13 +259,13 @@ nav {
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
 }
 
-.nav-list {
+.nav__list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.nav-list li {
+.nav__list li {
   margin-bottom: 1em;
   margin-left: 1em;
 }
@@ -268,12 +273,15 @@ nav {
 .nav__link {
   --spacing: 1em;
 
+
   display: inline-block;
   padding: calc(var(--spacing) / 2) var(--spacing);
   position: relative;
 
   letter-spacing: 2px;
-  font-size: 0.9rem;
+  font-family: 'Dancing Script';
+  font-size: 1.1rem;
+  text-transform: capitalize;
   color: inherit;
 
   text-decoration: underline;
@@ -284,7 +292,7 @@ nav {
   transition: opacity 150ms ease-in-out;
 }
 
-.nav-list li.active a {
+.nav__list li.active a {
   text-decoration-thickness: 0.25em;
 }
 
@@ -346,7 +354,7 @@ nav {
 }
 
 /* for big screen */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1300px) {
   .nav-toggle-label {
     display: none;
   }
@@ -391,7 +399,7 @@ nav {
     margin-bottom: 0;
   }
 
-  .nav-list a {
+  .nav__list a {
     opacity: 1;
   }
 }
