@@ -9,11 +9,14 @@
 </head>
 <body>
     {% include 'header.njk' %}
+    <section class="home-intro">
+        <h1>Nhìn thấy, Hiểu và Yêu Thương Chính Mình</h1>
+    </section>
     <main>
         {{ content | safe }}    
     </main>
     {% include 'footer.njk' %}
-
+    <script src="js/observers.js"></script>
     <script>
     if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", user => {
