@@ -282,7 +282,6 @@ nav {
 .nav__link {
   --spacing: 1em;
 
-
   display: inline-block;
   padding: calc(var(--spacing) / 2) var(--spacing);
   position: relative;
@@ -343,7 +342,7 @@ nav {
 .nav-toggle-label span::after {
   display: block;
   background: var(--clr-primary-400);
-  height: 2px;
+  height: 1px;
   width: 2em;
   border-radius: 2px;
   position: relative;
