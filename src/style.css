@@ -227,8 +227,10 @@ header {
   color: var(--text);
 }
 
-header .site-logo {
+header .site-logo img {
   margin-left: 5em;
+  width: 175px;
+  height: 70px;
 }
 
 nav {
