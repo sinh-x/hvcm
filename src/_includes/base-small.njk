@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    {% include 'header.njk' %}
-    <section class="home-intro">
+    {% include 'header-no-bg.njk' %}
+    <section class="small-intro">
       <h1>{{ headline }}</h1>
     </section>
     <main>
-        {{ content | safe }}    
+      {{ content | safe }}    
     </main>
     {% include 'footer.njk' %}
     <script src="js/observers.js"></script>
