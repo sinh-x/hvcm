@@ -1,0 +1,60 @@
+---
+title: Hiểu Về Chính Mình
+headline: Nhìn thấy, Hiểu và Yêu Thương Chính Mình
+layout: 'base.njk'
+banner:
+---
+
+<section class="hero">
+  <div class="container flow">
+      <div class="hero__content flow">
+        <h1 class="section-title soft-text">Aloha!</h1>
+        <p>Hiểu về chính mình là một hành trình mà mỗi người sẽ đi trong suốt cuộc sống của mình.</p>
+        <p>Nơi đây là một điểm bắt đầu để chúng mình gặp nhau và chia sẻ về hành trình của mỗi người trong chúng ta.</p>
+        <div class="flex-group">
+          <a href="/ve-truc-sinh" class="btn btn--primary">Về tụi mình...</a>
+          <a href="/lang-nghe-co-the" class="btn btn--neutral">Lắng nghe cơ thể</a>
+        </div>
+      </div>
+      <div class="carousel">
+        <button class="carousel__button carousel__button--left">
+          <img src="/assets/img/left-2.svg" alt="">
+        </button>
+        <div class="carousel__track-container">
+          <ul class="carousel__track">
+            {%- for post in collections.vetuiminh -%}
+              {% include 'image-carousel.njk' %}
+            {%- endfor %}
+          </ul>
+        </div>
+        <button class="carousel__button carousel__button--right">
+          <img src="/assets/img/right-2.svg" alt="">
+        </button>
+        <div class="carousel__nav">
+            {%- for post in collections.vetuiminh -%}
+              <button class="carousel__indicator"></button>
+            {%- endfor %}
+        </div>
+      </div>
+  </div>
+</section>
+
+<section id="featured-articles" class="featured-articles">
+  <div class="container flow">
+    <h2 class="section-title text-center">Chia sẻ của Trúc & Sinh</h2>
+    <p class="text-center">Đây là những bài viết chia sẻ về trải nghiệm của Trúc & Sinh trong hành trình Hiểu Về Chính Mình</p>
+    <ul role="list" class="articles__list flow">
+      {%- for post in collections.featured | reverse -%}
+        {% include 'article-snippet.njk' %}
+      {%- endfor %}
+    </ul>
+  </div>
+  <script src="js/carousel.js"></script>
+</section> 
+
+<section id="lang-nghe-co-the" class="booking-form">
+  <!-- Calendly inline widget begin -->
+  <div class="calendly-inline-widget" data-url="https://calendly.com/sinh_x/lang-nghe-co-the" style="min-width:320px;height:630px;"></div>
+  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <!-- Calendly inline widget end -->
+</section> 

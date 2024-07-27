@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/*"
+  to = "/link-loi-roi.html"
+  status = 404

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiểu Về Chính Mình</title>
+    <link href='https://fonts.googleapis.com/css?family=Dancing Script' rel='stylesheet'>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header class="page-header">
+  <a href="/" class="site-logo" aria-label="homepage"><img class='nav-icon' src='/assets/hvcm-logo.jpg'></a>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <nav>
+    <ul role="list" class="nav__list">
+      <li>
+        <a class="nav__link" href="/">Home</a>
+      </li>
+      <li>
+        <a class="nav__link" href="/ve-truc-sinh/">Về Trúc & Sinh</a>
+      </li>
+      <li>
+        <a class="nav__link" href="/dong-hanh-suc-khoe/">Đồng Hành Sức Khỏe</a>
+      </li>
+      <li>
+        <a class="nav__link" href="/testimonial/">Lời yêu thương</a>
+      </li>
+      <li>
+        <a class="nav__link" href="/blog/">Blog</a>
+      </li>
+      <li>
+        <a class="nav__link" href="/mon-ngon/">Món ngon Nhà Cá Voi</a>
+      </li>
+      <li>
+        <a class="nav__link" href="/contact/">Kết Nối</a>
+      </li>
+    </ul>
+  </nav>
+  <label for="nav-toggle" class="nav-toggle-label">
+    <span></span>
+  </label>
+</header>
+    <section class="home-intro">
+      <h1>Nhìn thấy, Hiểu và Yêu Thương Chính Mình</h1>
+    </section>
+    <main>
+        
+<section class="hero">
+  <div class="container flow">
+      <div class="hero__content flow">
+        <h1 class="section-title soft-text">Aloha!</h1>
+        <p>Hiểu về chính mình là một hành trình mà mỗi người sẽ đi trong suốt cuộc sống của mình.</p>
+        <p>Nơi đây là một điểm bắt đầu để chúng mình gặp nhau và chia sẻ về hành trình của mỗi người trong chúng ta.</p>
+        <div class="flex-group">
+          <a href="/ve-truc-sinh" class="btn btn--primary">Về tụi mình...</a>
+          <a href="/lang-nghe-co-the" class="btn btn--neutral">Lắng nghe cơ thể</a>
+        </div>
+      </div>
+      <div class="carousel">
+        <button class="carousel__button carousel__button--left">
+          <img src="/assets/img/left-2.svg" alt="">
+        </button>
+        <div class="carousel__track-container">
+          <ul class="carousel__track"><li class="carousel__slide">
+    <div class="carousel__date"><span class="soft-text">Jun 1, 2022</span></div>
+    <img src="/assets/ve-tui-minh/b70f7377e8c02c9e75d1.jpg" alt="Gia đình nhỏ - 2" class="carousel__image">
+</li>
+<li class="carousel__slide">
+    <div class="carousel__date"><span class="soft-text">Jun 1, 2022</span></div>
+    <img src="/assets/ve-tui-minh/f70e39e4a253660d3f42.jpg" alt="Gia đình nhỏ - 3" class="carousel__image">
+</li>
+<li class="carousel__slide">
+    <div class="carousel__date"><span class="soft-text">Jun 1, 2022</span></div>
+    <img src="/assets/ve-tui-minh/259d54abcf1c0b42520d.jpg" alt="Gia đình nhỏ" class="carousel__image">
+</li>
+<li class="carousel__slide">
+    <div class="carousel__date"><span class="soft-text">Sep 11, 2022</span></div>
+    <img src="/assets/ve-tui-minh/20220911_161833.jpg" alt="Uống trà ăn bánh" class="carousel__image">
+</li>
+
+          </ul>
+        </div>
+        <button class="carousel__button carousel__button--right">
+          <img src="/assets/img/right-2.svg" alt="">
+        </button>
+        <div class="carousel__nav"><button class="carousel__indicator"></button><button class="carousel__indicator"></button><button class="carousel__indicator"></button><button class="carousel__indicator"></button>
+        </div>
+      </div>
+  </div>
+</section>
+
+<section id="featured-articles" class="featured-articles">
+  <div class="container flow">
+    <h2 class="section-title text-center">Chia sẻ của Trúc & Sinh</h2>
+    <p class="text-center">Đây là những bài viết chia sẻ về trải nghiệm của Trúc & Sinh trong hành trình Hiểu Về Chính Mình</p>
+    <ul role="list" class="articles__list flow">
+    </ul>
+  </div>
+  <script src="js/carousel.js"></script>
+</section> 
+
+<section id="lang-nghe-co-the" class="booking-form">
+  <!-- Calendly inline widget begin -->
+  <div class="calendly-inline-widget" data-url="https://calendly.com/sinh_x/lang-nghe-co-the" style="min-width:320px;height:630px;"></div>
+  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <!-- Calendly inline widget end -->
+</section> 
+    
+    </main>
+    <footer class="site-footer">
+  <p>© 2022 Hiểu Về Chính Mình. All rights reserved.</p>
+</footer>
+    <script src="js/observers.js"></script>
+    <script>
+    if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+        if (!user) {
+            window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+            });
+        }
+        });
+    }
+    </script>
+</body>
+</html>
