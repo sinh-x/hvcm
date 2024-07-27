@@ -19,11 +19,9 @@ jobs:
       - name: Build site
         run: npx eleventy
 
-      - name: Push changes
-        run: |
-          git config --global user.name 'sinh-x'
-          git config --global user.email 'sinh@sinhn.com'
-          git push origin gh-pages
-        env:
-          GH_TOKEN: ${{ secrets.GH_PAT }}
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GH_PAT }}
+          publish_dir: ./public/
 
