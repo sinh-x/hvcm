@@ -21,7 +21,8 @@ jobs:
         run: npm run build
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
-          github_token: ${{ secrets.GH_PAT }}
-          publish_dir: ./public
+          token: ${{ secrets.GH_PAT }}
+          branch: gh-pages
+          folder: public
