@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/sinh-x/hvcm#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1"
+    "@11ty/eleventy": "^2.0.1",
+    "gh-pages": "^3.2.3"
   },
   "dependencies": {
     "a-sync-waterfall": "^1.0.1",
