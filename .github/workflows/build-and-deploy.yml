@@ -25,6 +25,8 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           git checkout --orphan gh-pages
+          git rm -rf .
+          cp -r public/* .
           git add -A
           git commit -m "Update GitHub Pages"
           git push -u origin +gh-pages
