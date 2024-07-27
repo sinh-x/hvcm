@@ -11,11 +11,9 @@ module.exports = function (eleventyConfig) {
   });
 
   return {
-    pathPrefix: "/hvcm/",
     dir: {
       input: "src",
       output: "public",
     },
   };
 };
-
