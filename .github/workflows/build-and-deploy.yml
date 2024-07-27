@@ -37,8 +37,12 @@ jobs:
           path: ./_site
 
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.5
-        with:
-          token: ${{ secrets.GH_PAT }}
-          branch: gh-pages
-          folder: ./_site/
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git checkout --orphan gh-pages
+          git add -A
+          git commit -m "Update GitHub Pages"
+          git push -u origin +gh-pages
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
