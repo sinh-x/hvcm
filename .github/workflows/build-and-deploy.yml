@@ -21,9 +21,9 @@ jobs:
 
       - name: Push changes
         run: |
-          git config --global user.name 'Your Name'
-          git config --global user.email 'your-email@example.com'
+          git config --global user.name 'sinh-x'
+          git config --global user.email 'sinh@sinhn.com'
           git push origin gh-pages
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_PAT }}
 
