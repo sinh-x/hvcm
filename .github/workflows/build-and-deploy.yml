@@ -46,4 +46,4 @@ jobs:
         with:
           token: ${{ secrets.GH_PAT }}
           branch: gh-pages
-          folder: public
+          folder: ./_site/
